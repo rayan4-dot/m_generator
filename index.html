@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meme Generator</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 min-h-screen flex items-center justify-center">
+
+
+  <div class="meme-generator max-w-3xl w-full p-8 bg-white shadow-2xl rounded-xl transition-transform transform hover:scale-105 hover:shadow-xl duration-300">
+    
+
+    <div class="text-center mb-8">
+      <h1 class="text-3xl font-extrabold text-gray-800"></h1>
+      <p class="text-xl text-gray-600 mt-2"></p>
+    </div>
+
+    <div class="mb-8">
+      <label for="imageFileInput" class="block text-lg font-semibold text-gray-700 mb-2">Select an Image</label>
+      <input type="file" id="imageFileInput" accept="image/*" class="w-full p-3 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:shadow-md transition-all"/>
+    </div>
+
+
+    <div class="grid grid-cols-1 gap-6 mb-8">
+
+      <div>
+        <label for="topTextInput" class="block text-lg font-semibold text-gray-700 mb-2">Top Text</label>
+        <input type="text" id="topTextInput" placeholder="Enter Top Text" class="w-full p-3 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:shadow-md transition-all"/>
+      </div>
+
+
+      <div>
+        <label for="bottomTextInput" class="block text-lg font-semibold text-gray-700 mb-2">Bottom Text</label>
+        <input type="text" id="bottomTextInput" placeholder="Enter Bottom Text" class="w-full p-3 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:shadow-md transition-all"/>
+      </div>
+    </div>
+
+
+    <div class="mb-6">
+      <label for="meme" class="block text-lg font-semibold text-gray-700 mb-2">Preview Your Meme</label>
+      <canvas id="meme" class="w-full bg-gray-200 border border-gray-300 rounded-lg hover:shadow-xl transition-shadow duration-300"></canvas>
+    </div>
+
+
+    <div id="loadingSpinner" class="loading-spinner hidden mx-auto my-4"></div>
+  </div>
+
+  <script src="main.js">
+  </script>
+</body>
+</html>
